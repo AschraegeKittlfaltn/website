@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://[your-username].github.io/kittlfaltn_website/sitemap.xml
+
+# Disallow access to development files
+Disallow: /src/fonts/
+Disallow: /.git/
+Disallow: /DEPLOYMENT_CHECKLIST.md
+Disallow: /README.md

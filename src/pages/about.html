@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns - KITTLFALTN</title>
+    <link rel="stylesheet" href="../fonts/montserrat-local.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/carousel.css">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="solid-bg">
+            <div class="logo">KITTLFALTN</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle active">Über uns</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="about-kathi.html">Über Kathi</a></li>
+                        <li><a href="about-peter.html">Über Peter</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="music.html">Hörproben und Videos</a></li>
+                <li><a href="events.html">Termine</a></li>
+                <li><a href="supporters.html">Freunde und Unterstützer</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carousel-container">
+            <div class="about-carousel" id="about-carousel">
+                <div class="carousel-item">
+                    <img src="../assets/Bilder/About1.jpg" alt="About Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/Bilder/About2.jpg" alt="About Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/Bilder/About3 .jpg" alt="About Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/Bilder/About4.jpg" alt="About Image 4">
+                </div>
+                <!-- Carousel navigation dots -->
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentAboutSlide(1)"></span>
+                    <span class="dot" onclick="currentAboutSlide(2)"></span>
+                    <span class="dot" onclick="currentAboutSlide(3)"></span>
+                    <span class="dot" onclick="currentAboutSlide(4)"></span>
+                </div>
+            </div>
+        </section>
+
+        <div class="carousel-divider"></div>
+
+        <section class="about-text">
+            <h1>Über uns</h1>
+            <p>Ja, wie hat es eigentlich begonnen mit der schrägn Kittlfaltn? Wie immer gibt es, wenn 2 Leute eine Geschichte erzählen, 2 Wahrheiten.</p>
+            
+            <p><strong>Peter würde erzählen</strong> (natürlich es sich bitte in Guntramsdorfer Slang vorzustellen): "Ich bin nach einem langen Tag bei der Gaadener Kirche stehen geblieben und wollte, wie so oft, dem lieben Herrgott und mir ein Ständchen spielen. Drinnen hab ich dann die Kathi singen gehört. Sie hat sofort aufgehört, wie ich reingekommen bin und nachdem ich ihr erzählt hab, dass ich hier Organist bin, hat sie gefragt, ob sie mir beim Spielen zuhören kann." <strong>ENDE</strong></p>
+            
+            <p><strong>Kathi würde erzählen:</strong> "Es war ein recht kühler Tag und mein Mann hatte in Gaaden etwas zu erledigen. In hab in der Zwischenzeit auf ihn gewartet und bin spazieren gegangen. Weil mir schon ein recht kalt war, hab ich mich in die Kirche gesetzt und ein bisschen gesungen. Ärgerlicherweise hat mich dann ein Mann bei meinen akustischen Erprobungen gestört. Als er mir in einem netten Gespräch jedoch erzählt hat, dass er hier Organist ist und mich gefragt hat, ob wir jetzt nicht einfach gemeinsam Musik machen wollen, war ich erfreut. Wir sind hinauf zur Orgel gegangen, haben uns das Gotteslob geschnappt und die 802er Schubertmesse musiziert. Ja und seitdem singen und spielen wir miteinander." <strong>ENDE</strong></p>
+            
+            <p>So, und welche wird wohl die "richtige Wahrheit" sein? Sucht es euch aus...</p>
+            
+            <p>Achso, beinahe hätte ich es vergessen: Zu den Lieblings-Auftrittsorten der schrägen Kittlfaltn zählen bis jetzt der wunderbar urige Heurige von Günther und Jelena „Zur blauen Nos´n" in Ottakring, das so herzlich geführte Haus Elisabeth in Laxenburg und das gemütliche Heimatmuseum in Gaaden. Weitere Locations wollen ganz sicher von uns noch erobert werden :) Wir freuen uns darauf...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KITTLFALTN. All rights reserved. | <a href="privacy.html">Datenschutz &amp; Impressum</a></p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/about-carousel.js"></script>
+</body>
+</html>

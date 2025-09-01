@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termine - KITTLFALTN</title>
+    <link rel="stylesheet" href="../fonts/montserrat-local.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="solid-bg">
+            <div class="logo">KITTLFALTN</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Über uns</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="about-kathi.html">Über Kathi</a></li>
+                        <li><a href="about-peter.html">Über Peter</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="music.html">Hörproben und Videos</a></li>
+                <li><a href="events.html">Termine</a></li>
+                <li><a href="supporters.html">Freunde und Unterstützer</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section" style="margin-top: 80px;">
+            <div class="events-container">
+                <!-- Upcoming Events Section -->
+                <div class="events-section">
+                    <h2>Kommende Auftritte</h2>
+                    <div id="upcoming-events" class="events-grid">
+
+                         <!-- Für neues Event den Block ab hier -->
+                        <div class="event-card upcoming" data-date="2025-10-15">
+                            <div class="event-date">
+                                <span class="day">15</span>
+                                <span class="month">Okt</span>
+                            </div>
+                            <div class="event-details">
+                                <h3>Herbstkonzert im Kulturzentrum</h3>
+                                <p class="event-location">📍 Kulturzentrum Linz, Hauptsaal</p>
+                                <p class="event-time">🕒 19:30 Uhr</p>
+                                <p class="event-description">Ein besonderer Abend mit traditioneller österreichischer Volksmusik und modernen Interpretationen.</p>
+                            </div>
+                        </div>
+                        <!-- bis hier kopieren -->
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KITTLFALTN. All rights reserved. | <a href="privacy.html">Datenschutz &amp; Impressum</a></p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    
+    <script>
+        // Automatic event management
+        function organizeEvents() {
+            const upcomingContainer = document.getElementById('upcoming-events'); 
+            
+            // Sort upcoming events by date (earliest first)
+            const upcomingEvents = Array.from(upcomingContainer.children);
+            upcomingEvents.sort((a, b) => {
+                const dateA = new Date(a.getAttribute('data-date'));
+                const dateB = new Date(b.getAttribute('data-date'));
+                return dateA - dateB;
+            });
+            upcomingEvents.forEach(event => upcomingContainer.appendChild(event));
+        }
+        
+        // Run organization on page load
+        document.addEventListener('DOMContentLoaded', organizeEvents);
+        
+        // Function to add new event (helper for future use)
+        function addNewEvent(title, location, time, description, date, isUpcoming = true) {
+            const eventCard = document.createElement('div');
+            eventCard.className = `event-card ${isUpcoming ? 'upcoming' : 'past'}`;
+            eventCard.setAttribute('data-date', date);
+            
+            const eventDate = new Date(date);
+            const day = eventDate.getDate().toString().padStart(2, '0');
+            const monthNames = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 
+                              'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
+            const month = monthNames[eventDate.getMonth()];
+            
+            eventCard.innerHTML = `
+                <div class="event-date">
+                    <span class="day">${day}</span>
+                    <span class="month">${month}</span>
+                </div>
+                <div class="event-details">
+                    <h3>${title}</h3>
+                    <p class="event-location">📍 ${location}</p>
+                    <p class="event-time">🕒 ${time}</p>
+                    <p class="event-description">${description}</p>
+                </div>
+            `;
+            
+            const container = document.getElementById('upcoming-events');
+
+            container.appendChild(eventCard);
+            
+            // Re-organize after adding
+            organizeEvents();
+        }
+        
+        // Example usage (commented out):
+        // addNewEvent('Neues Konzert', 'Musikverein Wien', '20:00 Uhr', 'Ein großartiger Abend erwartet Sie!', '2025-09-05');
+    </script>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .events-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .events-section {
+            margin-bottom: 50px;
+        }
+
+        .events-section h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #333;
+        }
+
+        .events-grid {
+            display: grid;
+            gap: 25px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            transition: all 0.3s ease;
+            border-left: 5px solid #333;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .event-card.upcoming {
+            border-left-color: #4CAF50;
+        }
+
+        .event-card.past {
+            border-left-color: #757575;
+            opacity: 0.85;
+        }
+
+        .event-date {
+            background: linear-gradient(135deg, #333, #555);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            min-width: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .event-card.upcoming .event-date {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+        }
+
+        .event-card.past .event-date {
+            background: linear-gradient(135deg, #757575, #616161);
+        }
+
+        .event-date .day {
+            font-size: 2rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .event-date .month {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        .event-details {
+            padding: 25px;
+            flex: 1;
+        }
+
+        .event-details h3 {
+            color: #333;
+            margin: 0 0 15px 0;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .event-location, .event-time {
+            color: #666;
+            margin: 8px 0;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .event-description {
+            color: #555;
+            line-height: 1.6;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        @media (max-width: 600px) {
+            .event-card {
+                flex-direction: column;
+            }
+
+            .event-date {
+                min-width: auto;
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
+                padding: 15px;
+            }
+
+            .event-date .day {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</body>
+</html>

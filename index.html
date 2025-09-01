@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KITTLFALTN - Österreichisches Volksmusik-Duo mit traditioneller Musik und modernem Charme. Kathi und Peter bieten authentische Auftritte für alle Anlässe.">
+    <meta name="keywords" content="KITTLFALTN, Volksmusik, Österreich, Duo, Kathi, Peter, traditionelle Musik, Auftritte, Veranstaltungen">
+    <meta name="author" content="KITTLFALTN">
+    <meta property="og:title" content="KITTLFALTN - Österreichisches Volksmusik-Duo">
+    <meta property="og:description" content="Traditionelle österreichische Volksmusik mit modernem Charme von Kathi und Peter">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://[your-username].github.io/kittlfaltn_website/">
+    <meta property="og:image" content="https://[your-username].github.io/kittlfaltn_website/src/assets/Bilder/home1.jpg">
+    <title>KITTLFALTN - Österreichisches Volksmusik-Duo</title>
+    <link rel="stylesheet" href="src/fonts/montserrat-local.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/navigation.css">
+    <link rel="stylesheet" href="src/css/carousel.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo">KITTLFALTN</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Über uns</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="src/pages/about.html">Über uns</a></li>
+                        <li><a href="src/pages/about-kathi.html">Über Kathi</a></li>
+                        <li><a href="src/pages/about-peter.html">Über Peter</a></li>
+                    </ul>
+                </li>
+                <li><a href="src/pages/gallery.html">Galerie</a></li>
+                <li><a href="src/pages/music.html">Hörproben und Videos</a></li>
+                <li><a href="src/pages/events.html">Termine</a></li>
+                <li><a href="src/pages/supporters.html">Freunde und Unterstützer</a></li>
+                <li><a href="src/pages/contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="carousel" id="landing-carousel">
+            <div class="carousel-item active">
+                <img src="src/assets/Bilder/home1.jpg" alt="Home Image 1">
+                <div class="slide-content">
+                    <a href="src/pages/about.html" class="slide-button">Über uns</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="src/assets/Bilder/home2.jpg" alt="Home Image 2">
+                <div class="slide-content">
+                    <a href="src/pages/music.html" class="slide-button">Unsere Musik</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="src/assets/Bilder/home3.jpg" alt="Home Image 3">
+                <div class="slide-content">
+                    <a href="src/pages/events.html" class="slide-button">Termine</a>
+                </div>
+            </div>
+            <a class="carousel-control prev" onclick="prevSlide()"></a>
+            <a class="carousel-control next" onclick="nextSlide()"></a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KITTLFALTN. All rights reserved. | <a href="src/pages/privacy.html">Datenschutz & Impressum</a></p>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script src="src/js/navigation.js"></script>
+    <script src="src/js/carousel.js"></script>
+</body>
+</html>

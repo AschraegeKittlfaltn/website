@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - KITTLFALTN</title>
+    <link rel="stylesheet" href="../fonts/montserrat-local.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="solid-bg">
+            <div class="logo">KITTLFALTN</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Über uns</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="about-kathi.html">Über Kathi</a></li>
+                        <li><a href="about-peter.html">Über Peter</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="music.html">Hörproben und Videos</a></li>
+                <li><a href="events.html">Termine</a></li>
+                <li><a href="supporters.html">Freunde und Unterstützer</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section" style="margin-top: 80px;">
+            <h1>Kontakt</h1>
+            <div class="contact-container">
+                <div class="contact-intro">
+                    <p>Wir spielen für euch bei allen Anlässen und bieten ein breites Allround-Repertoire.
+                        </br>Ob Hochzeit, Geburtstagsfeier, beim Heurigen oder ganz was Anderes ... wir finden die passenden Stücke für euch!
+                        </br>Wir freuen uns auf eure Nachricht oder euren Anruf!
+                    </p>
+                </div>
+
+                <div class="contact-cards">
+                    <div class="contact-card email-card">
+                        <div class="contact-icon">
+                            <img src="../assets/svg/letter.svg" alt="Email Icon" width="48" height="48">
+                        </div>
+                        <h3>E-Mail</h3>
+                        <p class="contact-detail">
+                            <a href="mailto:info@aschrägekittlfaltn.at">info@aschrägekittlfaltn.at</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-card phone-card">
+                        <div class="contact-icon">
+                            <img src="../assets/svg/phone.svg" alt="Phone Icon" width="48" height="48">
+                        </div>
+                        <h3>Telefon</h3>
+                        <p class="contact-detail">
+                            <a href="tel:+436641644513">+43 664/1644513</a><br>
+                            <span class="contact-person">(Peter Hackl)</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KITTLFALTN. All rights reserved. | <a href="privacy.html">Datenschutz &amp; Impressum</a></p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-intro {
+            text-align: center;
+            margin: 30px 0 50px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .contact-icon {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-icon img {
+            width: 48px;
+            height: 48px;
+            filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .contact-card:hover .contact-icon img {
+            filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+        }
+
+        .contact-card h3 {
+            color: #333;
+            margin: 0 0 15px;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .contact-detail {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .contact-detail a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .contact-detail a:hover {
+            color: #666;
+        }
+
+        .contact-person {
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .email-card {
+            border-left: 4px solid #4CAF50;
+        }
+
+        .phone-card {
+            border-left: 4px solid #2196F3;
+        }
+
+        .contact-message {
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</body>
+</html>

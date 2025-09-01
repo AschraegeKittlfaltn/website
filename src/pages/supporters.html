@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freunde und Unterstützer - KITTLFALTN</title>
+    <link rel="stylesheet" href="../fonts/montserrat-local.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <style>
+        /* Supporters styles - moved to head to prevent FOUC */
+        h1 {
+            text-align: center;
+        }
+
+        .supporters-intro {
+            text-align: center;
+            margin: 30px 0 50px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .supporters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .supporters-grid.loaded {
+            opacity: 1;
+        }
+
+        .supporter-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 140px;
+        }
+
+        .supporter-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .supporter-card img {
+            max-width: 100%;
+            max-height: 120px;
+            object-fit: contain;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navbar" class="solid-bg">
+            <div class="logo">KITTLFALTN</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../../index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Über uns</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="about-kathi.html">Über Kathi</a></li>
+                        <li><a href="about-peter.html">Über Peter</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="music.html">Hörproben und Videos</a></li>
+                <li><a href="events.html">Termine</a></li>
+                <li><a href="supporters.html">Freunde und Unterstützer</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section" style="margin-top: 80px;">
+            <h1>Freunde und Unterstützer</h1>
+            <div class="supporters-intro">
+                <p>Wir danken unseren Freunden und Unterstützern, die uns auf unserem musikalischen Weg begleiten.</p>
+            </div>
+            
+            <div class="supporters-grid">
+                <div class="supporter-card">
+                    <a href="https://www.akkordeonservice.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/kamleitner.jpg" alt="Kamleitner" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.kaerntnerland.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/kaerntnerland.png" alt="Kärntnerland" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.limex.eu/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/limex.png" alt="LIMEX" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.autofink.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/autofink.webp" alt="Autohaus Fink" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.ihre-steuerberatung.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/steuerberatung.jpg" alt="Steuerberatung Sandra Hofstädter" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://fosbury.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/fosbury.png" alt="Fosbury" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://mrclassico.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/mrclassico.png" alt="Mr. Classico" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://gausterer69.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/gausterer.png" alt="Gausterer69" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://reinhard-gausterer.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/teichheuriger.jpg" alt="Teichheuriger" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.stiftsbrauerei-schlaegl.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/schlaegl.jpg" alt="Schlägl" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.falter.at/lokal/455/zur-blauen-nos-n" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/bluenosn.webp" alt="Blue Nosn" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.wirb.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/wirb.jpg" alt="Wirb.AT" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.3-linden.at/de/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/3_linden.png" alt="3 Linden" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://admirawacker.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/admira_wacker.png" alt="Admira Wacker" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.amirado.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/amirado.png" alt="Amirado" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <img src="../assets/logos raw/as_folien.png" alt="AS Folientechnik" loading="lazy">
+                </div>
+                <div class="supporter-card">
+                    <a href="https://elektro-strauss.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/elektro_strauss.png" alt="Elektro Strauss" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="http://www.frische-eier.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/gausterer_eier.png" alt="Gausterer Eier" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://juwelier-jamgotschjan.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/jamgotschan.png" alt="Juwelier Jamgotschjan" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.lanzinger-harmonika.com/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/lanzinger.png" alt="Lanzinger Harmonika" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.ludwig-getraenke.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/ludwig.png" alt="Ludwig Getränke" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.oksolutions.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/ok_solutions.png" alt="OK Solutions" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.pizzeriapiccino.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/pinoccio.png" alt="Pizzeria Piccino" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.raiffeisen.at/noew/moedling/de/privatkunden.html" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/raija.png" alt="Raiffeisen Bank" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.optiker-schloegl.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/schloegl.png" alt="Optiker Schlögl" loading="lazy">
+                    </a>
+                </div>
+                <div class="supporter-card">
+                    <a href="https://www.nixe.at/" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/logos raw/zur_nixe.png" alt="Zur Nixe" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KITTLFALTN. All rights reserved. | <a href="privacy.html">Datenschutz &amp; Impressum</a></p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script>
+        // Prevent FOUC by revealing supporters grid after images are loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const supportersGrid = document.querySelector('.supporters-grid');
+            const images = supportersGrid.querySelectorAll('img');
+            let loadedImages = 0;
+
+            function revealGrid() {
+                supportersGrid.classList.add('loaded');
+            }
+
+            function imageLoaded() {
+                loadedImages++;
+                if (loadedImages === images.length) {
+                    revealGrid();
+                }
+            }
+
+            // Set up image load handlers
+            images.forEach(img => {
+                if (img.complete) {
+                    imageLoaded();
+                } else {
+                    img.addEventListener('load', imageLoaded);
+                    img.addEventListener('error', imageLoaded); // Count errors as loaded
+                }
+            });
+
+            // Fallback: reveal after 1 second even if not all images are loaded
+            setTimeout(revealGrid, 1000);
+        });
+    </script>
+
+</body>
+</html>

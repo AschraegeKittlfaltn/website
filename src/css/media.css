@@ -1,0 +1,110 @@
+.content-wrapper {
+    max-width: 1200px;
+    margin: 100px auto 60px;
+    padding: 0 20px;
+}
+.content-wrapper h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #333;
+}
+.page-description {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+.media-section {
+    margin-bottom: 60px;
+}
+.media-section h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+.media-item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.media-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.media-item h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+.media-item audio,
+.media-item video {
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+}
+.media-item audio {
+    height: 40px;
+}
+.media-item video {
+    max-height: 300px;
+}
+.media-item audio::-webkit-media-controls-panel {
+    background-color: #fff;
+}
+.media-item video::-webkit-media-controls-panel {
+    background-color: rgba(0,0,0,0.8);
+}
+@media (max-width: 768px) {
+    .content-wrapper {
+        margin: 80px auto 40px;
+        padding: 0 15px;
+    }
+    .content-wrapper h1 {
+        font-size: 2rem;
+    }
+    .media-section h2 {
+        font-size: 1.5rem;
+    }
+    .media-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .media-item {
+        padding: 20px;
+    }
+    .media-item h3 {
+        font-size: 1.1rem;
+    }
+    .page-description {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: 0 10px;
+    }
+    .media-item {
+        padding: 15px;
+    }
+    .content-wrapper h1 {
+        font-size: 1.8rem;
+    }
+}
