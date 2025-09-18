@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://[your-username].github.io/kittlfaltn_website/sitemap.xml
+Sitemap: https://aschraegekittlfaltn.at/sitemap.xml
 
 # Disallow access to development files
 Disallow: /src/fonts/
